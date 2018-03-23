@@ -1,0 +1,63 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+
+    defaultConfig {
+        applicationId = 'com.example.hellolibs'
+        minSdkVersion 25
+        targetSdkVersion 25
+        versionCode = 1
+        versionName = '1.0'
+        ndk {
+            //abiFilters 'armeabi-v7a','x86'
+            abiFilters 'armeabi-v7a'
+        }
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'),
+                          'proguard-rules.pro'
+        }
+    }
+    sourceSets {
+        main {
+            // let gradle pack the shared library into apk
+            jniLibs.srcDirs = ['../distribution/gperf/lib']
+        }
+    }
+    externalNativeBuild {
+        cmake {
+            path 'src/main/cpp/CMakeLists.txt'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:25.1.0'
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
+}
+
+// Workaround library native code dependency issue in gradle 3.0.0
+// refer to https://issuetracker.google.com/issues/69616088
+// Note that the followings are only needed to generate lib package
+// into $project/distribution directory, does NOT affect application module;
+// Only enable these when want to build libs (together with note
+// inside settings.gradle)
+
+tasks.whenTaskAdded { task ->
+    if (task.name == 'externalNativeBuildRelease') {
+        task.dependsOn ":testlib:externalNativeBuildRelease"
+    } else if (task.name == 'externalNativeBuildDebug') {
+        task.dependsOn ":testlib:externalNativeBuildDebug"
+    }
+}
+
+
+task cleanall {
+    println "apk cleanall"
+    delete 'build'
+    delete '.externalNativeBuild'
+}
