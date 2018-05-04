@@ -1,0 +1,16 @@
+total 60
+drwxrwxr-x  8 ocean ocean 4096  4月  9 14:18 build-tools
+drwxrwxr-x  3 ocean ocean 4096  2月  7 18:29 cmake
+drwxrwxr-x  7 ocean ocean 4096  2月  7 15:43 emulator
+drwxrwxr-x  5 ocean ocean 4096  2月  7 19:06 extras
+drwxrwxr-x  3 ocean ocean 4096  2月  7 19:10 fonts
+drwxrwxr-x  2 ocean ocean 4096  2月  7 17:56 licenses
+drwxrwxr-x  3 ocean ocean 4096  4月  9 15:37 lldb
+drwxrwxr-x 12 ocean ocean 4096  2月  7 18:03 ndk-bundle
+drwxrwxr-x  3 ocean ocean 4096  2月  7 15:42 patcher
+drwxrwxr-x  6 ocean ocean 4096  3月 20 14:14 platforms
+drwxrwxr-x  5 ocean ocean 4096  2月  7 15:42 platform-tools
+drwxrwxr-x 23 ocean ocean 4096  3月 14 15:24 skins
+drwxrwxr-x  4 ocean ocean 4096  3月 29 17:00 sources
+drwxrwxr-x  4 ocean ocean 4096  3月 14 15:25 system-images
+drwxrwxr-x  6 ocean ocean 4096  2月  7 15:42 tools

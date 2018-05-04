@@ -1,0 +1,11 @@
+total 48
+drwxrwxr-x  3 ocean ocean  4096  3月  7 16:17 bin
+-rw-rw-r--  1 ocean ocean    14  3月  7 16:17 build.txt
+drwxrwxr-x  4 ocean ocean  4096 10月 23  2017 gradle
+-rw-r--r--  1 ocean ocean  1934 10月 20  2017 Install-Linux-tar.txt
+drwxrwxr-x  6 ocean ocean  4096 10月 23  2017 jre
+drwxrwxr-x  5 ocean ocean  4096  3月  7 16:17 lib
+drwxrwxr-x  2 ocean ocean  4096 10月 23  2017 license
+-rw-r--r--  1 ocean ocean 11352 10月 20  2017 LICENSE.txt
+-rw-r--r--  1 ocean ocean   397 10月 20  2017 NOTICE.txt
+drwxrwxr-x 39 ocean ocean  4096 10月 23  2017 plugins
